@@ -131,5 +131,14 @@ public class WebController {
 		modelAndView.addObject("users", listAllUsers());
 		return modelAndView;
 	}
+	/* This is Jay Savla's edit of the file to make a simple HTTP API.
+	*/
+	@RequestMapping(value = "/cs480/ping", method = RequestMethod.GET)
+	String helloWorld() {
+		// You can replace this with other string,
+		// and run the application locally to check your changes
+		// with the URL: http://localhost:8080/
+		return "Hello World. This is Jay Savla's HTTP API";
+	}
 
 }
