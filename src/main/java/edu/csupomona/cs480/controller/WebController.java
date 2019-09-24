@@ -61,6 +61,17 @@ public class WebController {
 	}
 
 	
+	/* This is Jay Savla's edit of the file to make a simple HTTP API.
+	*/
+	@RequestMapping(value = "/cs480/jay", method = RequestMethod.GET)
+	String jaysFunction() {
+		// You can replace this with other string,
+		// and run the application locally to check your changes
+		// with the URL: http://localhost:8080/
+		return "OK - It's Jay";
+	}
+
+	
 	
 
 	/**
