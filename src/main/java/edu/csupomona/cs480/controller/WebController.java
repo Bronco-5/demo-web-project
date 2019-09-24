@@ -48,9 +48,20 @@ public class WebController {
 	String healthCheck() {
 		// You can replace this with other string,
 		// and run the application locally to check your changes
-		// with the URL: http://localhost:8080/
+		// with the URL: http://localhost:8080 or http://localhost:8080/cs480/ping
 		return "OK-It's Willow";
 	}
+	
+	@RequestMapping(value = "/cs480/taha", method = RequestMethod.GET)
+	String tahasFunction() {
+		// You can replace this with other string,
+		// and run the application locally to check your changes
+		// with the URL: http://localhost:8080/cs480/taha
+		return "OK-It's Taha";
+	}
+
+	
+	
 
 	/**
 	 * This is a simple example of how to use a data manager
