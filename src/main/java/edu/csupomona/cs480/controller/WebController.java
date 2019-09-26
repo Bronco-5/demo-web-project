@@ -168,5 +168,19 @@ public class WebController {
 		return modelAndView;
 	}
 	
+	/********** Test of Commons Math API*******/
+	/**
+	 * This method can inverse a matrix 
+	 * @param matrix
+     * @return
+	 */
+	double[][] array(double[][] matrix)
+	{
+     Array2DRowRealMatrix rMatrix=new Array2DRowRealMatrix(matrix);
+	 RealMatrix inv=MatrixUtils.inverse(rMatrix);
+	 double[][]invert=inv.getData();
+	 return invert;
+	}
+	
 
 }
