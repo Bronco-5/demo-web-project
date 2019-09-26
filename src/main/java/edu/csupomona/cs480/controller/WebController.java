@@ -1,7 +1,12 @@
 package edu.csupomona.cs480.controller;
 
 import java.util.List;
+import org.apache.commons.io.IOUtils;
 
+import java.io.*;
+import org.apache.commons.io.LineIterator;
+
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -56,7 +61,7 @@ public class WebController {
 	String willowFunction() {
 		// You can replace this with other string,
 		// and run the application locally to check your changes
-		// with the URL: http://localhost:8080 or http://localhost:8080/cs480/ping
+		// with the URL: http://localhost:8080/cs480/willow
 		return "OK-It's Willow";
 	}
 	
@@ -183,10 +188,8 @@ public class WebController {
 	}
 
 	/******* Test of GSon Library by Jay Savla
-	 
-
 	*/
-	@RequestMapping(value = "/cs480/users/list", method = RequestMethod.GET)
+	@RequestMapping(value = "/cs480/users/jaylist", method = RequestMethod.GET)
 	String helloGson() {
 		Gson gson = new Gson();
 		int[] ints = {1, 2, 3, 4, 5};
@@ -195,5 +198,12 @@ public class WebController {
 		gson.toJson(strings);
 	}
 	
-
+	/********** Test of Commons-IO ******* by Willow *******/
+	@RequestMapping(value = "/cs480/users/willowlist", method = RequestMethod.GET)
+	void willow(String[] args)
+	{
+		out = new PrintWriter(System.out,true);
+        //Creating InputStream from String.
+        out.println("This is test by Willow");
+	}
 }
