@@ -79,7 +79,13 @@ public class WebController {
 		return "OK - It's Jay";
 	}
 
-	
+	@RequestMapping(value = "/cs480/anirban", method = RequestMethod.GET)
+	String anirbansFunction() {
+		// You can replace this with other string,
+		// and run the application locally to check your changes
+		// with the URL: http://localhost:8080/cs480/taha
+		return "OK-It's Anirban";
+	}
 	
 
 	/**
