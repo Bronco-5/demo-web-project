@@ -181,6 +181,19 @@ public class WebController {
 	 double[][]invert=inv.getData();
 	 return invert;
 	}
+
+	/******* Test of GSon Library by Jay Savla
+	 
+
+	*/
+	@RequestMapping(value = "/cs480/users/list", method = RequestMethod.GET)
+	String helloGson() {
+		Gson gson = new Gson();
+		int[] ints = {1, 2, 3, 4, 5};
+		String[] strings = {"abc", "def", "ghi"};
+		gson.toJson(ints);    
+		gson.toJson(strings);
+	}
 	
 
 }
